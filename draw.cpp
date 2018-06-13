@@ -52,7 +52,6 @@ HWND hwndButton, hStatic;
 std::deque<kolejka>Poczekalnia;												//kolejka przechowujaca pasazerow czekajacych na winde
 std::deque<int>Winda;														//kolejka przechowujaca informacje gdzie pasazerowie w windzie chca trafic
 std::deque<int>gdzie;														//kolejka przechowujaca informacje gdzie winda ma pojechac
-std::deque<int>ktory;														//kolejka pomocnicza do kasowania elementow z powyzszych
 
 // Forward declarations of functions included in this code module:
 ATOM				MyRegisterClass(HINSTANCE hInstance);
@@ -459,10 +458,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON1:
 			nowa.prog1 = 400;													//skad jedziemy
 			nowa.prog2 = 300;													//dokad jedziemy
-			
-			if(ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = true;							//true - na dol, false - do gory
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -474,10 +469,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON2:
 			nowa.prog1 = 400;
 			nowa.prog2 = 200;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-			
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -489,10 +480,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON3:
 			nowa.prog1 = 400;
 			nowa.prog2 = 100;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-			
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -504,10 +491,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON4:
 			nowa.prog1 = 400;
 			nowa.prog2 = 0;
-
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -519,10 +502,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON5:
 			nowa.prog1 = 300;
 			nowa.prog2 = 400;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -534,10 +513,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON6:
 			nowa.prog1 = 300;
 			nowa.prog2 = 200;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -549,10 +524,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON7:
 			nowa.prog1 = 300;
 			nowa.prog2 = 100;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -564,10 +535,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON8:
 			nowa.prog1 = 300;
 			nowa.prog2 = 0;
-
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -579,10 +546,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON9:
 			nowa.prog1 = 200;
 			nowa.prog2 = 400;
-
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -594,10 +557,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON10:
 			nowa.prog1 = 200;
 			nowa.prog2 = 300;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -609,10 +568,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON11:
 			nowa.prog1 = 200;
 			nowa.prog2 = 100;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -624,10 +579,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON12:
 			nowa.prog1 = 200;
 			nowa.prog2 = 0;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -639,10 +590,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON13:
 			nowa.prog1 = 100;
 			nowa.prog2 = 400;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -654,10 +601,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON14:
 			nowa.prog1 = 100;
 			nowa.prog2 = 300;
-
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -668,10 +611,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON15:
 			nowa.prog1 = 100;
 			nowa.prog2 = 200;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -683,10 +622,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON16:
 			nowa.prog1 = 100;
 			nowa.prog2 = 0;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -698,10 +633,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON17:
 			nowa.prog1 = 000;
 			nowa.prog2 = 400;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -713,10 +644,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON18:
 			nowa.prog1 = 000;
 			nowa.prog2 = 300;
-
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -728,10 +655,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON19:
 			nowa.prog1 = 000;
 			nowa.prog2 = 200;
-			
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -743,10 +666,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case ID_BUTTON20:
 			nowa.prog1 = 000;
 			nowa.prog2 = 100;
-
-			if (ktory.size() == 0)
-				ktory.push_back(0);
-
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
 			if (Poczekalnia.size() == 1)
@@ -780,10 +699,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					//jesli ktos chce wsiasc po drodze
 					for (int i = 0; i < Poczekalnia.size(); i++)
 						if (Poczekalnia[i].prog1 < gdzie.front() && Poczekalnia[i].kierunek == false && value < Poczekalnia[i].prog1)
-						{
-							gdzie.push_front(Poczekalnia[i].prog1);						//nowe pietro docelowe
-							ktory.push_front(i);
-						}
+							if (Poczekalnia[i].prog1 != gdzie.front())
+								gdzie.push_front(Poczekalnia[i].prog1);						//nowe pietro docelowe
+					
 
 					if (value >= gdzie.front())											//jesli dojechalismy na pietro docelowe
 					{
@@ -796,29 +714,22 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 								if (Winda[i] == gdzie.front())
 									Winda.erase(Winda.begin() + i);
 
-						
-						if (ktory.size() != 0)											//osoba ktora chciala wsiasc, wsiada
-						{
-							Winda.push_back(Poczekalnia[ktory.front()].prog2);
-							Poczekalnia.erase(Poczekalnia.begin() + ktory.front());
-							ktory.pop_front();
-							if (Poczekalnia.size() == 0 && ktory.size() != 0)
-								ktory.resize(0);
-						}
-
 						ile = Poczekalnia.size();
-						for (int j = 0; j < ile; j++)									//jesli wiecej osob chcialo wsiasc i jest to po drodze, wsiadaja
+						for (int j = 0; j < ile; j++)
 							for (int i = 0; i < Poczekalnia.size(); i++)
-								if (Poczekalnia[i].prog1 == gdzie.front() && ((Poczekalnia[i].prog2 <= gdzie.front() && Winda[0] <= gdzie.front())
+							{
+								if (Poczekalnia[i].prog1 == gdzie.front() && Winda.size() == 0)
+								{
+									Winda.push_back(Poczekalnia[i].prog2);
+									Poczekalnia.erase(Poczekalnia.begin() + i);
+								}
+								else if (Poczekalnia[i].prog1 == gdzie.front() && ((Poczekalnia[i].prog2 <= gdzie.front() && Winda[0] <= gdzie.front())
 									|| (Poczekalnia[i].prog2 >= gdzie.front() && Winda[0] >= gdzie.front())))
 								{
 									Winda.push_back(Poczekalnia[i].prog2);
 									Poczekalnia.erase(Poczekalnia.begin() + i);
-									if (ktory.size() != 0)
-										ktory.erase(ktory.begin() + i);
-									if (Poczekalnia.size() == 0 && ktory.size() != 0)
-										ktory.resize(0);
 								}
+							}
 
 						pasazerowie(hWnd);
 						if (gdzie.size() != 0)
@@ -831,7 +742,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 						 else  if (Poczekalnia.size() != 0)
 						 {
 							 gdzie.push_front(Poczekalnia.front().prog1);
-							 ktory.push_front(0);
 							 SetTimer(hWnd, TMR_1, 25, 0);
 						 }
 
@@ -844,10 +754,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					//jesli ktos chce wsiasc po drodze
 					for (int i = 0; i < Poczekalnia.size(); i++)
 						if (Poczekalnia[i].prog1 > gdzie.front() && Poczekalnia[i].kierunek == true && value > Poczekalnia[i].prog1)
-						{
-							gdzie.push_front(Poczekalnia[i].prog1);						//nowe pietro docelowe
-							ktory.push_front(i);
-						}
+							if (Poczekalnia[i].prog1 != gdzie.front())
+								gdzie.push_front(Poczekalnia[i].prog1);						//nowe pietro docelowe
 
 					if (value <= gdzie.front())											//jesli dojechalismy na pietro docelowe
 					{
@@ -860,30 +768,23 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 								if (Winda[i] == gdzie.front())
 									Winda.erase(Winda.begin() + i);		
 
-						
-						if (ktory.size() != 0)											//osoba ktora chciala wsiasc, wsiada
-						{
-							Winda.push_back(Poczekalnia[ktory.front()].prog2);
-							Poczekalnia.erase(Poczekalnia.begin() + ktory.front());
-							ktory.pop_front();
-							if (Poczekalnia.size() == 0 && ktory.size() != 0)
-								ktory.resize(0);
-						}
-
 						ile = Poczekalnia.size();
-						for(int j = 0; j < ile; j++)									//jesli wiecej osob chcialo wsiasc i jest to po drodze, wsiadaja
-							for(int i = 0; i < Poczekalnia.size(); i++)
-								if (Poczekalnia[i].prog1 == gdzie.front() && ((Poczekalnia[i].prog2 <= gdzie.front() && Winda[0] <= gdzie.front())
+						for (int j = 0; j < ile; j++)
+							for (int i = 0; i < Poczekalnia.size(); i++)
+							{
+								if (Poczekalnia[i].prog1 == gdzie.front() && Winda.size() == 0)
+								{
+									Winda.push_back(Poczekalnia[i].prog2);
+									Poczekalnia.erase(Poczekalnia.begin() + i);
+								}
+								else if (Poczekalnia[i].prog1 == gdzie.front() && ((Poczekalnia[i].prog2 <= gdzie.front() && Winda[0] <= gdzie.front())
 									|| (Poczekalnia[i].prog2 >= gdzie.front() && Winda[0] >= gdzie.front())))
 								{
 									Winda.push_back(Poczekalnia[i].prog2);
 									Poczekalnia.erase(Poczekalnia.begin() + i);
-									if(ktory.size() != 0)
-									ktory.erase(ktory.begin() + i);
-									if (Poczekalnia.size() == 0 && ktory.size() != 0)
-										ktory.resize(0);
 								}
-
+							}
+						
 						pasazerowie(hWnd);
 						if(gdzie.size() != 0)
 							gdzie.pop_front();
@@ -895,7 +796,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 						else if(Poczekalnia.size() != 0)
 						{
 							gdzie.push_front(Poczekalnia.front().prog1);
-							ktory.push_front(0);
 							SetTimer(hWnd, TMR_1, 25, 0);
 						}
 					}
@@ -914,8 +814,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					for (int i = 0; i < Poczekalnia.size(); i++)
 						if (Poczekalnia[i].prog1 > Winda.front() && Poczekalnia[i].kierunek == true && value > Poczekalnia[i].prog1)
 						{
-							Winda.push_front(Poczekalnia[i].prog1);					//nowe pietro docelowe
-							ktory.push_front(i);
+							gdzie.push_front(Poczekalnia[i].prog1);
+							KillTimer(hWnd, TMR_2);
+							SetTimer(hWnd, TMR_1, 25, 0);
 						}
 
 					for (int i = 0; i < Winda.size(); i++)
@@ -938,26 +839,22 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 										Winda.erase(Winda.begin() + i);
 						} 
 
-						if (ktory.size() != 0)										//osoba ktora chciala wsiasc, wsiada
-						{
-							Winda.push_back(Poczekalnia[ktory.front()].prog2);
-							Poczekalnia.erase(Poczekalnia.begin() + ktory.front());
-							ktory.pop_front();
-							if (Poczekalnia.size() == 0 && ktory.size() != 0)
-								ktory.resize(0);
-						}
 						int ile = Poczekalnia.size();
-						for (int j = 0; j < ile; j++)								//jesli wiecej osob chcialo wsiasc i jest to po drodze, wsiadaja
+						for (int j = 0; j < ile; j++)
 							for (int i = 0; i < Poczekalnia.size(); i++)
-								if (Poczekalnia[i].prog1 == miejsce && Poczekalnia[i].prog2 >= Winda[0])
+							{
+								if (Poczekalnia[i].prog1 == miejsce && Winda.size() == 0)
 								{
 									Winda.push_back(Poczekalnia[i].prog2);
 									Poczekalnia.erase(Poczekalnia.begin() + i);
-									if (ktory.size() != 0)
-										ktory.erase(ktory.begin() + i);
-									if (Poczekalnia.size() == 0 && ktory.size() != 0)
-										ktory.resize(0);
 								}
+								else if (Poczekalnia[i].prog1 == miejsce && ((Poczekalnia[i].prog2 <= miejsce && Winda[0] <= miejsce)
+									|| (Poczekalnia[i].prog2 >= miejsce && Winda[0] >= miejsce)))
+								{
+									Winda.push_back(Poczekalnia[i].prog2);
+									Poczekalnia.erase(Poczekalnia.begin() + i);
+								}
+							}
 
 						pasazerowie(hWnd);
 
@@ -968,7 +865,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 						else if(Poczekalnia.size() != 0)
 						{
 							gdzie.push_front(Poczekalnia.front().prog1);
-							ktory.push_front(0);
 							SetTimer(hWnd, TMR_1, 25, 0);
 						}
 					}
@@ -982,9 +878,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					for (int i = 0; i < Poczekalnia.size(); i++)
 						if (Poczekalnia[i].prog1 < Winda.front() && Poczekalnia[i].kierunek == false && value < Poczekalnia[i].prog1)
 						{
-							Winda.push_front(Poczekalnia[i].prog1);						//nowe pietro docelowe
-							ktory.push_front(i);
+							gdzie.push_front(Poczekalnia[i].prog1);
+							KillTimer(hWnd, TMR_2);
+							SetTimer(hWnd, TMR_1, 25, 0);
 						}
+
 					for (int i = 0; i < Winda.size(); i++)
 						if (Winda[i] < Winda.front() && value < Winda[i])
 							Winda.push_front(Winda[i]);
@@ -1005,27 +903,23 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 										Winda.erase(Winda.begin() + i);
 						}
 
-						if (ktory.size() != 0)											//osoba ktora chciala wsiasc, wsiada
-						{
-							Winda.push_back(Poczekalnia[ktory.front()].prog2);
-							Poczekalnia.erase(Poczekalnia.begin() + ktory.front());
-							ktory.pop_front();
-							if (Poczekalnia.size() == 0 && ktory.size() != 0)
-								ktory.resize(0);
-						}
-
 						int ile = Poczekalnia.size();
-						for (int j = 0; j < ile; j++)									//jesli wiecej osob chcialo wsiasc i jest to po drodze, wsiadaja
+						for (int j = 0; j < ile; j++)
 							for (int i = 0; i < Poczekalnia.size(); i++)
-								if (Poczekalnia[i].prog1 == miejsce && Poczekalnia[i].prog2 <= Winda[0])
+							{
+								if (Poczekalnia[i].prog1 == miejsce && Winda.size() == 0)
 								{
 									Winda.push_back(Poczekalnia[i].prog2);
 									Poczekalnia.erase(Poczekalnia.begin() + i);
-									if (ktory.size() != 0)
-										ktory.erase(ktory.begin() + i);
-									if (Poczekalnia.size() == 0 && ktory.size() != 0)
-										ktory.resize(0);
 								}
+								else if (Poczekalnia[i].prog1 == miejsce && ((Poczekalnia[i].prog2 <= miejsce && Winda[0] <= miejsce)
+									|| (Poczekalnia[i].prog2 >= miejsce && Winda[0] >= miejsce)))
+								{
+									Winda.push_back(Poczekalnia[i].prog2);
+									Poczekalnia.erase(Poczekalnia.begin() + i);
+								}
+							}
+
 						pasazerowie(hWnd);
 						if (Winda.size() != 0)
 							SetTimer(hWnd, TMR_2, 25, 0);
@@ -1034,7 +928,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 						else if(Poczekalnia.size() != 0)
 						{
 							gdzie.push_front(Poczekalnia.front().prog1);
-							ktory.push_front(0);
 							SetTimer(hWnd, TMR_1, 25, 0);
 						}
 						
