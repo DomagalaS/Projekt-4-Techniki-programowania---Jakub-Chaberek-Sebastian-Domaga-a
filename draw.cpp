@@ -460,7 +460,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 300;													//dokad jedziemy
 			nowa.kierunek = true;							//true - na dol, false - do gory
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -471,7 +471,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 200;
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -482,7 +482,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 100;
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -493,7 +493,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 0;
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -504,7 +504,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 400;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -515,7 +515,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 200;
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -526,7 +526,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 100;
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -537,7 +537,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 0;
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -548,7 +548,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 400;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -559,7 +559,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 300;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -570,7 +570,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 100;
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -581,7 +581,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 0;
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -592,7 +592,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 400;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -603,7 +603,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 300;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -613,7 +613,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 200;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -624,7 +624,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 0;
 			nowa.kierunek = true;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -635,7 +635,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 400;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -646,7 +646,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 300;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -657,7 +657,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 200;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
@@ -668,7 +668,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			nowa.prog2 = 100;
 			nowa.kierunek = false;
 			Poczekalnia.push_back(nowa);
-			if (Poczekalnia.size() == 1)
+			if (Poczekalnia.size() == 1 && Winda.size() == 0)
 			{
 				gdzie.push_back(nowa.prog1);
 				SetTimer(hWnd, TMR_1, 25, 0);
